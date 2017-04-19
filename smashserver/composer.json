@@ -1,0 +1,15 @@
+{
+    "name": "alquemedia/smash-pdf",
+    "description": "Smash PDF allows you to smash together html templates and JSON data into a PDF",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alquemedia S.A.S",
+            "email": "david@alquemedia.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^0.8.0"
+    }
+}

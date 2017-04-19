@@ -1,11 +1,11 @@
 import axios from "axios";
 
-export function generatePDF() {
+export function generatePDF( params ) {
   return {
     type: "GENERATE_PDF",
     payload: axios.post("http://smash.localhost.com",{
-      json: { "a":"b"},
-      template: "<p>{{a}}</p>"
+      json: JSON.parse(params.json),
+      template: params.template
     })
   }
 }
