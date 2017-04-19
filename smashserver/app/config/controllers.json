@@ -1,0 +1,71 @@
+{
+    "routes": {
+
+        "home": {
+
+            "type": "cors-angular",
+
+            "controller": "Home_Ctrl"
+
+        },
+
+        "signup": {
+
+            "layout": "login",
+
+            "theme": "",
+
+            "theme-root": "/themes//"
+
+        },
+
+        "rest": {
+
+            "type": "rest-api",
+
+            "controller": "REST_API_Ctrl"
+        },
+
+        "register-user": {
+
+            "comment": "This controller is used for cross-domain login from AngularJS client",
+
+            "type": "register-user",
+
+            "controller": "Register_User_Ctrl"
+
+        },
+
+
+        "login-check": {
+
+            "comment": "This controller is used for cross-domain login status check from AngularJS client",
+
+            "type": "login-check",
+
+            "controller": "Login_Check_Ctrl"
+
+        },
+
+        "do-logout": {
+
+            "comment": "This controller is used for cross-domain logout from AngularJS client",
+
+            "type": "do-logout",
+
+            "controller": "Do_Logout_Ctrl"
+
+        },
+
+
+        "do-signin": {
+
+            "comment": "This controller is used for cross-domain login from AngularJS client",
+
+            "type": "do-signin",
+
+            "controller": "Do_Signin_Ctrl"
+
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "models": {
+        "user": {
+            "table_name": "user",
+            "key_column": "user_id",
+            "safe_delete": false,
+            "reference_column": "",
+            "auto_parse_relationships": false,
+            "is_updateable": true
+        },
+        "email_template": {
+            "table_name": "email_template",
+            "key_column": "email_template_id",
+            "safe_delete": false,
+            "reference_column": "",
+            "auto_parse_relationships": false,
+            "is_updateable": true
+        },
+        "website_page": {
+            "table_name": "website_page",
+            "key_column": "website_page_id",
+            "safe_delete": false,
+            "reference_column": "",
+            "auto_parse_relationships": false,
+            "is_updateable": true
+        },
+        "menu_item": {
+            "table_name": "menu_item",
+            "key_column": "menu_item_id",
+            "safe_delete": false,
+            "reference_column": "",
+            "auto_parse_relationships": false,
+            "is_updateable": true
+        },
+        "page_section": {
+            "table_name": "page_section",
+            "key_column": "page_section_id",
+            "safe_delete": false,
+            "reference_column": "",
+            "auto_parse_relationships": false,
+            "is_updateable": true
+        },
+        "parnassus_configuration": {
+            "table_name": "parnassus_configuration",
+            "key_column": "parnassus_configuration_id",
+            "safe_delete": false,
+            "reference_column": "",
+            "auto_parse_relationships": false,
+            "is_updateable": true
+        }
+    },
+    "tables_and_views": [
+        "user",
+        "email_template",
+        "website_page",
+        "menu_item",
+        "page_section",
+        "parnassus_configuration"
+    ]
+}
