@@ -1,6 +1,10 @@
 <?php namespace smashserver\Components\Rendering;
 
 use Code_Alchemy\Core\Array_Representable_Object;
+use Code_Alchemy\Core\Random_Password;
+use Code_Alchemy\Core\Webroot;
+use Dompdf\Dompdf;
+use Handlebars\Handlebars;
 
 /**
  * Class Smash_to_PDF
@@ -32,7 +36,32 @@ class Smash_to_PDF extends Array_Representable_Object {
 
 	}
 
+	/**
+	 * Render the data
+	 * @param array $data
+	 * @param $template
+	 */
 	private function processData( array $data, $template ){
+
+		$this->render = (new Handlebars())->render($template,$data);
+
+		$dompdf = new Dompdf();
+
+		$dompdf->loadHtml($this->render);
+
+		$dompdf->setPaper('Letter','landscape');
+
+		$dompdf->render();
+
+		$output = $dompdf->output();
+
+		$canonicalName = new Random_Password( 10 ) . ".pdf";
+
+		$filename      = new Webroot() . "/pdfs/" . $canonicalName;
+
+		file_put_contents( $filename, $output);
+
+		$this->pdf_filename = "http://".$_SERVER['HTTP_HOST']."/pdfs/$canonicalName";
 
 	}
 

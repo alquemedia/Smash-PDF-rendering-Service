@@ -5,7 +5,7 @@ export function generatePDF() {
     type: "GENERATE_PDF",
     payload: axios.post("http://smash.localhost.com",{
       json: { "a":"b"},
-      template: "<p>Hi</p>"
+      template: "<p>{{a}}</p>"
     })
   }
 }
