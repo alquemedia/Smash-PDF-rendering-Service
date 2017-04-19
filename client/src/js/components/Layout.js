@@ -32,7 +32,7 @@ export default class Layout extends React.Component {
   render() {
 
     // Generate a link to the file
-    const link = this.props.pdf_filename.length ?
+    const link = this.props.pdf_filename?
         <a target="_new" href={this.props.pdf_filename}>click to view PDF</a>:
         '';
 
